@@ -23,6 +23,27 @@ class ViewController: UIViewController {
         
     @IBOutlet weak var umrechnenButton: UIButton!
     
+    @IBAction func umrechnenGeklickt(_ sender: Any) {
+        guard let betragIsDouble = Double(betragEingabe.text ?? "") else {
+            ergebnisLabel.text = "Ungültiger Betrag"
+            return
+        }
+        
+        let ausgangWaehrungIndex = ausgangsWaerungsPicker.selectedRow(inComponent: 0)
+        let zielWaehrungIndex = zielWaehrungsPicker.selectedRow(inComponent: 0)
+        
+        let ausgangsWaehrung = waerungen[ausgangWaehrungIndex]
+        let ziehlWaehrung = waerungen[zielWaehrungIndex]
+        
+        umrechnenWaehrung(betrag: betragIsDouble, von: ausgangsWaehrung, zu: ziehlWaehrung) { result in
+            if let result = result {
+                self.ergebnisLabel.text = String(format: "%.2f", result ?? 0.0)
+            } else {
+                
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ausgangsWaerungsPicker.delegate = self

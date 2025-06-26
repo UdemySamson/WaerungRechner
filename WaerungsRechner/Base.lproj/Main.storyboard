@@ -35,6 +35,9 @@
                                 <rect key="frame" x="140" y="657" width="114" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Umwandeln"/>
+                                <connections>
+                                    <action selector="umrechnenGeklickt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Db1-BZ-vYO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-QU-c95">
                                 <rect key="frame" x="67" y="118" width="261" height="34"/>
