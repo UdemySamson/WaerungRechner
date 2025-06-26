@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let apiKey = "120a2a22f17ec743ce923b9e"
+    
     let waerungen = ["USD", "EUR", "CHF", "GBP", "JPY", "RUB"]
     
     @IBOutlet weak var betragEingabe: UITextField!
@@ -29,6 +31,64 @@ class ViewController: UIViewController {
         zielWaehrungsPicker.delegate = self
         zielWaehrungsPicker.dataSource = self
     }
+    
+    func umrechnenWaehrung(betrag: Double, von: String, zu: String, completion: @escaping (Double?) -> Void) {
+        let url = URL(string: "https://v6.exchangerate-api.com/v6/\(apiKey)/latest/\(von)")!
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Fehler: \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let data = data else {
+                print("Keine Daten zurückgegeben.")
+                completion(nil)
+                return
+            }
+            
+            if let rateResponse = try? JSONDecoder().decode(RateResponse.self, from: data) {
+                if let rate = rateResponse.conversion_rates[zu] {
+                    let umgerechneteBetrag = betrag * rate
+                    DispatchQueue.main.async {
+                        completion(umgerechneteBetrag)
+                    }
+                }
+                else {
+                    print("Kein wechselkurs für \(von) gefunden.")
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                }
+            }
+        }; task.resume()
+    }
+    
+    struct RateResponse: Decodable {
+        let result: String
+        let documentation: String
+        let terms_of_use: String
+        let time_last_update_unix: Int
+        let time_last_update_utc: String
+        let time_next_update_unix: Int
+        let time_next_update_utc: String
+        let base_code: String
+        let conversion_rates: [String: Double]
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case documentation
+        case terms_of_use = "terms_of_use"
+        case time_last_update_unix = "time_last_update_unix"
+        case time_last_update_utc = "time_last_update_utc"
+        case time_next_update_unix = "time_next_update_unix"
+        case time_next_update_utc = "time_next_update_utc"
+        case base_code = "base_code"
+        case conversion_rates = "conversion"
+        
+    }
+    
 }
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
