@@ -16,54 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5m5-Zr-33P">
-                                <rect key="frame" x="0.0" y="260" width="393" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5m5-Zr-33P">
+                                <rect key="frame" x="1" y="243" width="393" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Am4-gr-S3g"/>
+                                </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Umwandeln zu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRq-Ta-4ZQ">
-                                <rect key="frame" x="120" y="437" width="152" height="42"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Umwandeln zu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRq-Ta-4ZQ">
+                                <rect key="frame" x="120" y="413" width="152" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6wm-hi-iHk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s30-WA-MED">
-                                <rect key="frame" x="1" y="481" width="393" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w9-NR-vSw">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w9-NR-vSw">
                                 <rect key="frame" x="140" y="657" width="114" height="35"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Umwandeln"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-QU-c95">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-QU-c95">
                                 <rect key="frame" x="67" y="118" width="261" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7I-eb-Rqq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7I-eb-Rqq">
                                 <rect key="frame" x="67" y="160" width="261" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Umgerechnete Betrag: Nicht berechnet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-BJ-5bZ">
-                                <rect key="frame" x="47" y="216" width="300" height="36"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Umgerechnete Betrag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-BJ-5bZ">
+                                <rect key="frame" x="67" y="178" width="261" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s30-WA-MED">
+                                <rect key="frame" x="1" y="469" width="393" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="kQW-EB-mdP"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5w9-NR-vSw" secondAttribute="bottom" constant="92" id="5kD-9q-dYO"/>
+                            <constraint firstItem="FRq-Ta-4ZQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="EOT-lg-Epm"/>
+                            <constraint firstItem="h2L-QU-c95" firstAttribute="leading" secondItem="RHL-BJ-5bZ" secondAttribute="leading" id="Fl5-6d-osB"/>
+                            <constraint firstItem="5w9-NR-vSw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GCg-7a-1aH"/>
+                            <constraint firstItem="h2L-QU-c95" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lru-ux-0G1"/>
+                            <constraint firstItem="5m5-Zr-33P" firstAttribute="top" secondItem="RHL-BJ-5bZ" secondAttribute="bottom" constant="29" id="SRS-kO-V6V"/>
+                            <constraint firstItem="FRq-Ta-4ZQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SxE-js-4lI"/>
+                            <constraint firstItem="5w9-NR-vSw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="TTg-zQ-5Pn"/>
+                            <constraint firstItem="5m5-Zr-33P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="Udo-Ws-cL4"/>
+                            <constraint firstItem="s30-WA-MED" firstAttribute="top" secondItem="FRq-Ta-4ZQ" secondAttribute="bottom" constant="14" id="VJH-Me-9FU"/>
+                            <constraint firstItem="h2L-QU-c95" firstAttribute="leading" secondItem="l7I-eb-Rqq" secondAttribute="leading" id="bOu-nV-9Ja"/>
+                            <constraint firstItem="5m5-Zr-33P" firstAttribute="leading" secondItem="s30-WA-MED" secondAttribute="leading" id="d6y-AE-LEi"/>
+                            <constraint firstItem="l7I-eb-Rqq" firstAttribute="top" secondItem="h2L-QU-c95" secondAttribute="bottom" constant="8" id="eA8-nf-VBn"/>
+                            <constraint firstItem="5m5-Zr-33P" firstAttribute="trailing" secondItem="s30-WA-MED" secondAttribute="trailing" id="kZX-Sa-IS5"/>
+                            <constraint firstItem="h2L-QU-c95" firstAttribute="trailing" secondItem="l7I-eb-Rqq" secondAttribute="trailing" id="lpq-cm-bVA"/>
+                            <constraint firstItem="5w9-NR-vSw" firstAttribute="top" secondItem="s30-WA-MED" secondAttribute="bottom" constant="26" id="pgw-T2-8d6"/>
+                            <constraint firstItem="h2L-QU-c95" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="q7U-9R-MIR"/>
+                            <constraint firstItem="5m5-Zr-33P" firstAttribute="centerX" secondItem="RHL-BJ-5bZ" secondAttribute="centerX" id="t8R-Bv-Oew"/>
+                            <constraint firstItem="h2L-QU-c95" firstAttribute="trailing" secondItem="RHL-BJ-5bZ" secondAttribute="trailing" id="wRj-Rf-uKX"/>
+                            <constraint firstItem="FRq-Ta-4ZQ" firstAttribute="top" secondItem="5m5-Zr-33P" secondAttribute="bottom" constant="8" id="xYX-kB-924"/>
+                            <constraint firstItem="s30-WA-MED" firstAttribute="centerX" secondItem="5w9-NR-vSw" secondAttribute="centerX" id="zzX-JF-PYq"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="ausgangsWaerungsPicker" destination="5m5-Zr-33P" id="PTF-QR-XmU"/>
                         <outlet property="betragEingabe" destination="h2L-QU-c95" id="oCd-im-UyP"/>
-                        <outlet property="ergebnisLabel" destination="l7I-eb-Rqq" id="H4u-tL-mh9"/>
+                        <outlet property="ergebnisLabel" destination="RHL-BJ-5bZ" id="tzL-Kz-XoQ"/>
+                        <outlet property="umrechnenButton" destination="5w9-NR-vSw" id="Gzl-pS-2Bt"/>
+                        <outlet property="zielWaehrungsPicker" destination="s30-WA-MED" id="Rfv-ds-w2O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
