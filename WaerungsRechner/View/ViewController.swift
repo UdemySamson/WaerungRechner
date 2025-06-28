@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         ausgangsWaerungsPicker.dataSource = self
         zielWaehrungsPicker.delegate = self
         zielWaehrungsPicker.dataSource = self
+        
+        umrechnenButton.layer.cornerRadius = 15
     }
 }
 
