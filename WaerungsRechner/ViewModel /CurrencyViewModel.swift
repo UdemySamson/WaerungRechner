@@ -7,9 +7,8 @@
 
 import Foundation
 
-import Foundation
-
 class CurrencyViewModel {
+    
     let currencies = ["USD","AED","AFN","ALL","AMD","ANG","AOA","ARS","AUD","AWG","AZN","BAM",
                       "BBD","BDT","BGN","BHD","BIF","BMD","BND","BOB","BRL","BSD","BTN","BWP",
                       "BYN","BZD","CAD","CDF","CHF","CLP","CNY","COP","CRC","CUP","CVE","CZK",
@@ -24,6 +23,7 @@ class CurrencyViewModel {
                       "SYP","SZL","THB","TJS","TMT","TND","TOP","TRY","TTD","TVD","TWD","TZS",
                       "UAH","UGX","UYU","UZS","VES","VND","VUV","WST","XAF","XCD","XDR","XOF",
                       "XPF","YER","ZAR","ZMW","ZWL"]
+    
     private let currencyService = CurrencyService()
     
     var amount: Double = 0.0
